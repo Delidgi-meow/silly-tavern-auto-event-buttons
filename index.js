@@ -27,7 +27,7 @@ const promptTypes = {
   "[OOC: You will NOW cause an environmental change, like weather or location shift, that alters the story!]": "Изменение окружения",
   "[OOC: You will NOW do something UNPREDICTABLE that leads to ultimate CHAOS and DRAMA.]": "Хаос и драма",
   "Actually, the scene is getting stale. Progress it, to make things more interesting! Reintroduce an unresolved plot point from the past. Be creative, but stay grounded in the setting.": "Нейтральный",
-  [randomStalePrompt]: "Случайный поворот (гигантский рандом)"
+  [randomStalePrompt]: "Рандомный поворот"
 };
 /**
  * 2. HTML-КОНТЕНТ
@@ -243,18 +243,7 @@ jQuery(async () => {
       } else if (buttonId === 'event-neutral') {
         prompt = neutralPrompt;
       } else if (buttonId === 'event-random') {
-        // Логика случайного выбора промпта, как в бывшем автоматическом режиме
-        const eventChance = Math.random();
-        if (eventChance < 0.4) {
-          // 40% — обычные повороты
-          prompt = plotTwistPrompts[Math.floor(Math.random() * plotTwistPrompts.length)];
-        } else if (eventChance < 0.6) {
-          // 20% — хаос
-          prompt = chaosPrompts[Math.floor(Math.random() * chaosPrompts.length)];
-        } else {
-          // 40% — гигантский рандом с {{random::}}
-          prompt = randomStalePrompt;
-        }
+        prompt = randomStalePrompt;
       }
       if (prompt) {
         addHiddenPrompt(prompt);
@@ -400,4 +389,3 @@ jQuery(async () => {
     console.error("Критическая ошибка при загрузке 'Кнопок Авто-Событий':", error);
   }
 });
-
