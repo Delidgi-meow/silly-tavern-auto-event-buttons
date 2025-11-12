@@ -2,9 +2,10 @@
   "name": "auto-event-buttons",
   "display_name": "Кнопки Авто-Событий",
   "version": "1.0.0",
-  "description": "Добавляет настраиваемые кнопки для быстрой отправки промптов (авто-событий).",
+  "description": "Добавляет настраиваемые кнопки для событий.",
   "author": "Лапочка",
   "js": ["index.js"],
   "css": ["style.css"],
   "html_templates": ["template.html"]
+
 }
