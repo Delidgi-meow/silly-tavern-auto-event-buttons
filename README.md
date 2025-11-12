@@ -1,5 +1,5 @@
 Оставь надежду сюда входящий
 
-Установка: https://github.com/hydyakovatata-lgtm/silly-tavern-auto-event-buttons
+Установка: https://github.com/Delidgi-meow/silly-tavern-auto-event-buttons
 
 Нажимаем на кнопку нужного события и пишем в чат сообщение боту, автоматически применяется событие от нейтрального(если выбрали его, до енотов и тентаклей)
